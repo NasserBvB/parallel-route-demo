@@ -16,12 +16,11 @@ export default function Error({
     }, [error])
 
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center h-screen">
             <h2 className="text-2xl font-bold">Something went wrong!</h2>
             <button
                 className="text-sm font-medium text-blue-600 hover:underline"
                 onClick={
-                    // Attempt to recover by trying to re-render the segment
                     () => reset()
                 }
             >
