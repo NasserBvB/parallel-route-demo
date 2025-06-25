@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useDrawer } from "../layout";
+import { useDrawer } from "@/src/app/lib/providers/drawer";
 
 type Email = {
     id: number;

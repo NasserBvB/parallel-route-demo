@@ -1,24 +1,13 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState, createContext, useContext } from "react";
+import { useState } from "react";
 
+import { DrawerContext } from "./lib/providers/drawer";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
-// Context for drawer state
-const DrawerContext = createContext<{
-  closeDrawer: () => void;
-} | null>(null);
-
-export const useDrawer = () => {
-  const context = useContext(DrawerContext);
-  if (!context) {
-    throw new Error('useDrawer must be used within DrawerProvider');
-  }
-  return context;
-};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
